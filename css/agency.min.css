@@ -224,6 +224,9 @@ header.masthead .intro-text .intro-heading {
 #bookshop * {
         z-index: 2;
 }
+#bookshop{
+  background-color: #d0845a;
+}
 @media (min-width:767px) {
         #bookshop .bookshop-item {
         margin: 0 0 30px;
