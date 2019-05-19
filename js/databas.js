@@ -30,11 +30,10 @@ $.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json
   }
 });
 
-
-//Författare på hover
+//Sammanfattning på boken vid hover
 $.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=jhilAunbb77LGdv58T8iWHJbgNBgvxVr", function(data){
-  var bild = [document.getElementById("bokImg").src, document.getElementById("bokImg1"), document.getElementById("bokImg3"), document.getElementById("bokImg4"), document.getElementById("bokImg5"), document.getElementById("bokImg6")]
+  var headers = [document.getElementById("description1"), document.getElementById("description2"), document.getElementById("description3"), document.getElementById("description4"), document.getElementById("description5"), document.getElementById("description6")]
   for (var i = 0; i < 6; i++) {
-    bild[i].src = (JSON.stringify(data.results.books[i].book_image));
+    headers[i].innerHTML = JSON.stringify(data.results.books[i].description);
   }
 });
